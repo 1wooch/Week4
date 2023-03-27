@@ -23,6 +23,11 @@ struct ContentView: View {
                 ForEach(myGuests,id: \.self) {
                     guest in
                     /*@START_MENU_TOKEN@*/Text(guest.name)/*@END_MENU_TOKEN@*/
+                }.onDelete{
+                    indecs in myGuests.remove(atOffsets: indecs)
+                    //indecs??
+                    
+                    
                 }
             }.navigationBarItems(leading: EditButton(), trailing:Button("+"){
                 //enter what + button will do if it clicked
