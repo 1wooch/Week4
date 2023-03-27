@@ -22,18 +22,22 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
+                EditView(item: $myTitle)
                 List{
                     ForEach(model.friends,id: \.self){
                         data in Text(data.desc)
                     }.onDelete{
                         idx in model.friends.remove(atOffsets: idx)
+                        model.save()
                     }.onMove{
                         idx,i in model.friends.move(fromOffsets: idx, toOffset: i)
+                        model.save()
                     }
                 }
             }.navigationTitle(myTitle)
                 .navigationBarItems(leading: EditButton(), trailing: Button("+"){
                     model.friends.append(Person(firstName: "New", lastName: "Friend"))
+                    model.save()
                 })
         }
     }

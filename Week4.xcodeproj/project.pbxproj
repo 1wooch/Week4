@@ -15,6 +15,8 @@
 		081463E529D17668007368ED /* Week4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463E429D17668007368ED /* Week4UITests.swift */; };
 		081463E729D17668007368ED /* Week4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463E629D17668007368ED /* Week4UITestsLaunchTests.swift */; };
 		081463F429D18831007368ED /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463F329D18831007368ED /* DataModel.swift */; };
+		081463F629D19743007368ED /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463F529D19743007368ED /* EditView.swift */; };
+		081463F829D19937007368ED /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463F729D19937007368ED /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		081463E429D17668007368ED /* Week4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4UITests.swift; sourceTree = "<group>"; };
 		081463E629D17668007368ED /* Week4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		081463F329D18831007368ED /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		081463F529D19743007368ED /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		081463F729D19937007368ED /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		081463C829D17667007368ED /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				081463F729D19937007368ED /* DetailView.swift */,
+				081463F529D19743007368ED /* EditView.swift */,
 				081463C929D17667007368ED /* Week4App.swift */,
 				081463CB29D17667007368ED /* ContentView.swift */,
 				081463F329D18831007368ED /* DataModel.swift */,
@@ -262,6 +268,8 @@
 			files = (
 				081463CC29D17667007368ED /* ContentView.swift in Sources */,
 				081463CA29D17667007368ED /* Week4App.swift in Sources */,
+				081463F629D19743007368ED /* EditView.swift in Sources */,
+				081463F829D19937007368ED /* DetailView.swift in Sources */,
 				081463F429D18831007368ED /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

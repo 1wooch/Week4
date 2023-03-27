@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Week4App: App {
-    @State var model:DataModel = DataModel(friends: testFriends)
+    @State var model:DataModel = DataModel()
     var body: some Scene {
         WindowGroup {
             ContentView(model:$model)

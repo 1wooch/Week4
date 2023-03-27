@@ -68,4 +68,20 @@ extension Person{
         }
         return fullName
     }
+    var strAge:String{
+        get {
+            if let a = age
+            {
+                return "\(a)"
+            }
+            return "<unknown>"
+            
+        }
+        set{
+            guard let a = Int(newValue) else{
+                return
+            }
+            self.age=a
+        }
+    }
 }
