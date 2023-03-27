@@ -18,15 +18,23 @@ struct ContentView: View {
     //]
     
     @Binding var model:DataModel
-    
+    @State var myTitle = "Friend List"
     var body: some View {
         NavigationView{
-            List{
-                ForEach(model.friends,id: \.self){
-                    data in Text(data.desc)
-                    
+            VStack{
+                List{
+                    ForEach(model.friends,id: \.self){
+                        data in Text(data.desc)
+                    }.onDelete{
+                        idx in model.friends.remove(atOffsets: idx)
+                    }.onMove{
+                        idx,i in model.friends.move(fromOffsets: idx, toOffset: i)
+                    }
                 }
-            }
+            }.navigationTitle(myTitle)
+                .navigationBarItems(leading: EditButton(), trailing: Button("+"){
+                    model.friends.append(Person(firstName: "New", lastName: "Friend"))
+                })
         }
     }
 }
