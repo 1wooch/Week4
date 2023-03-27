@@ -14,6 +14,7 @@
 		081463DB29D17668007368ED /* Week4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463DA29D17668007368ED /* Week4Tests.swift */; };
 		081463E529D17668007368ED /* Week4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463E429D17668007368ED /* Week4UITests.swift */; };
 		081463E729D17668007368ED /* Week4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463E629D17668007368ED /* Week4UITestsLaunchTests.swift */; };
+		081463F429D18831007368ED /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081463F329D18831007368ED /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		081463E029D17668007368ED /* Week4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Week4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		081463E429D17668007368ED /* Week4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4UITests.swift; sourceTree = "<group>"; };
 		081463E629D17668007368ED /* Week4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		081463F329D18831007368ED /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				081463C929D17667007368ED /* Week4App.swift */,
 				081463CB29D17667007368ED /* ContentView.swift */,
+				081463F329D18831007368ED /* DataModel.swift */,
 				081463CD29D17668007368ED /* Assets.xcassets */,
 				081463CF29D17668007368ED /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				081463CC29D17667007368ED /* ContentView.swift in Sources */,
 				081463CA29D17667007368ED /* Week4App.swift in Sources */,
+				081463F429D18831007368ED /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
