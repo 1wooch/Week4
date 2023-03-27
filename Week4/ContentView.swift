@@ -24,8 +24,11 @@ struct ContentView: View {
             VStack{
                 EditView(item: $myTitle)
                 List{
-                    ForEach(model.friends,id: \.self){
-                        data in Text(data.desc)
+                    ForEach($model.friends,id: \.self){
+                        $data in
+                        NavigationLink(destination:DetailView(person: $data)){
+                            Text(data.desc)
+                        }
                     }.onDelete{
                         idx in model.friends.remove(atOffsets: idx)
                         model.save()
