@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     @Binding var person: Person
+    @Binding var model:DataModel
     @State var fname: String=""
     @State var lname: String=""
     @State var age: String=""
@@ -16,13 +17,13 @@ struct DetailView: View {
     var body: some View {
         VStack{
             Text("First Name: \(fname)")
-            EditView(item: $fname)
+            EditView(item: $fname, model: $model)
             
             Text("Last Name: \(lname)")
-            EditView(item: $lname)
+            EditView(item: $lname, model: $model)
             
             Text("Age: \(age)")
-            EditView(item: $age)
+            EditView(item: $age, model: $model)
             
             Spacer()
             
@@ -30,11 +31,13 @@ struct DetailView: View {
             fname=person.firstName
             lname=person.lastName
             age=person.strAge
+            model.save()
             
         }.onDisappear{
             person.firstName=fname
             person.lastName=lname
             person.strAge=age
+            model.save()
         }.padding()
     }
 }

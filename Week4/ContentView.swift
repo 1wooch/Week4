@@ -7,26 +7,19 @@
 
 import SwiftUI
 
-struct Guest:Hashable{
-    var name:String="<unknown>"
-}
-
 struct ContentView: View {
-    //@State var clickTimes = 0
-    //@State var myGuests=[
-    //Guest(name: "Tom"),Guest(name: "Jerry")
-    //]
+ 
     
     @Binding var model:DataModel
-    @State var myTitle = "Friend List"
+    
     var body: some View {
         NavigationView{
             VStack{
-                EditView(item: $myTitle)
+                EditView(item: $model.title, model: $model)
                 List{
                     ForEach($model.friends,id: \.self){
                         $data in
-                        NavigationLink(destination:DetailView(person: $data)){
+                        NavigationLink(destination:DetailView(person: $data,model: $model)){
                             Text(data.desc)
                         }
                     }.onDelete{
@@ -37,7 +30,7 @@ struct ContentView: View {
                         model.save()
                     }
                 }
-            }.navigationTitle(myTitle)
+            }.navigationTitle(model.title)
                 .navigationBarItems(leading: EditButton(), trailing: Button("+"){
                     model.friends.append(Person(firstName: "New", lastName: "Friend"))
                     model.save()

@@ -15,7 +15,7 @@ struct Person:Hashable,Codable
 }
 
 func getFile()-> URL?{
-    let filename="myfriends.json"
+    let filename="myfriends1.json"
     let fm = FileManager.default
     guard let url = fm.urls(for: .documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first else{
         return nil
@@ -26,8 +26,10 @@ func getFile()-> URL?{
 
 struct DataModel :Codable{
     var friends:[Person]
+    var title:String
     init(){
         friends = []
+        title=""
         load() //initial start when program start to run
     }
     
@@ -36,9 +38,11 @@ struct DataModel :Codable{
               let data = try? Data(contentsOf: url),
               let datamodel = try? JSONDecoder().decode(DataModel.self, from: data)else{
             self.friends=testFriends
+            self.title=testTitle
             return
         }
         self.friends=datamodel.friends
+        self.title=datamodel.title
             
     }
     func save(){
@@ -51,7 +55,7 @@ struct DataModel :Codable{
     }
     
 }
-
+var testTitle="Friend List"
 var testFriends = [
     Person(firstName: "Tom", lastName: "Cat", age: 3),
     Person(firstName: "Jerry", lastName: "Mouse")
